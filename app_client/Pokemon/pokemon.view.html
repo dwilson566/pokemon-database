@@ -1,0 +1,74 @@
+<style>
+body  {
+    background-image: url("http://feelgrafix.com/data/pictures/pictures-1.jpg");
+    background-color: #cccccc;
+}
+</style>
+
+<div id="wrapper" ng-class="vm.toggle"? 'toggled':''">
+
+    <sidebar></sidebar>
+    
+    <!--Page content-->
+    
+    <!-- Page Content -->
+    
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>{{vm.content}}</h1> 
+                        <form novalidate>
+                            <div class="form-group">
+                                <label for="selectName">Pokemon Name</label>
+                                <select id="selectName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectName" 
+                                        <!-- his is where the pokemon names will be imported from the service -->
+                                        ng-options="apt.airportName for apt in vm.airports"></select> 
+                                <p class="bg-info" ng-bind="vm.selectedName.pokemonData"></p>
+                            </div>
+                            
+                            
+                            <div class="form-group" background = backgroud = "http://feelgrafix.com/data/pictures/pictures-1.jpg">
+                                <label for="selectType">Type</label>
+                                <select id="selectType" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedType" 
+                                        ng-options="apt.airportName for apt in vm.airports"></select>
+                                <p class="bg-info" ng-bind="vm.selectedType.pokemonData"></p>
+                            </div>
+                            
+                            
+                            
+                            <div class="form-group">
+                                <label for="selectWeight"> Weight (KG)</label>
+                                <select id="selectWeight" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedWeight" 
+                                        ng-options="climb.weight for climb in vm.climbData"></select>
+                                <p class="bg-info" ng-bind="vm.selectedWeight.weight"></p>
+                            </div>         
+                            
+                            
+                            <div class="form-group">
+                                <label for="selectHeight"> Height (KG)</label>
+                                <select id="selectHeight" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedWeight" 
+                                        ng-options="climb.weight for climb in vm.climbData"></select>
+                                <p class="bg-info" ng-bind="vm.selectedWeight.weight"></p>
+                            </div>        
+                        </form>
+                    
+                    <!--<a href="#menu-toggle" class="btn btn-default" id="menu-toggle" ng-click="toggleMenu">Toggle Menu</a>-->
+                    <button type="button" class="btn btn-default btn-link" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle">Toggle Menu</button>
+                    <button type="button" class="btn btn-default" id="clear-selected-data" ng-click="vm.clearSelectedData()">Clear Selected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
