@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 
+
+
+
+
 <div id="wrapper" ng-class="vm.toggle ? 'toggled' : ''">
 
     <sideBar></sideBar>
@@ -10,9 +14,51 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>{{vm.Types}} </h1>
                     
-                    <p>This application uses data from a pokemonAPI to gather data about individual pokemon in the fist Generation.</p>
+                    <!--<p>fist Generation abilites.  </p>
+                    <p>{{vm.tableData[1].name}}</p> -->
+                    
+                    <table class = "table">
+                        <thead class="table table-striped">
+                          <tbody>
+                          <tr>
+                            <th bgcolor="#777777" headers="name">Pokemon Type</th>
+                            <th bgcolor="#777777" headers="immunes">Immuninities</th>
+                            <th bgcolor="#777777" headers="weaknesses">Weaknesses</th>
+                            <th bgcolor="#777777" headers="strengths">Strengths</th>
+                        </tr>
+                        <tr ng-repeat = "x in vm.tableData ">
+                            <td> {{x.name}}</td>
+                            <td> {{x.immunes}}</td>
+                            <td> {{x.weaknesses}}</td>
+                            <td>{{x.strengths}}</td>
+                        </tr>
+                        </tbody>
+                      </thread>
+                    </table>
+
+                    
+                    
+                   <!-- <div ng-repeat= "x in vm.Types" class = "col-md-3">
+                        {{x}}
+                    </div> -->
+               
+               
+                    
+                    <!--<div ng-repeat= "y in vm.Immunes"> {{y}}</div>
+                    <div ng-repeat= "z in vm.Types"> {{z}}</div> -->
+                    
+                    
+                    
+
+
+
+<!-- <div class="col-md-12">
+  <div ng-repeat="x in vm.tableData">
+    <div ng-class="{'clearfix': $index%3 === 0}"></div>
+    <div class="col-md-12">{{x}}</div>
+  </div>
+</div> -->
 
                     <button type="button" class="btn btn-default btn-link" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle">Toggle Menu</button>
                 </div>
@@ -25,3 +71,35 @@
     
 </div>
 
+
+<style>
+table , td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+
+}
+th{
+    border: 1px solid grey;
+    border-collapse: separate;
+    padding: 10px;
+ 
+    width: 6em;
+    text-align: center;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+body{
+background-image: url("https://i.imgur.com/5Ue3MPm.jpg");
+}
+
+</style>

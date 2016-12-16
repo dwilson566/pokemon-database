@@ -10,13 +10,7 @@ function homeCtrl($http) {
        vm.output = response.data;
 
     });
-    vm.pageHeader = {
-        title: 'Home',
-        strapline: 'Earthquake reporting app'
-    };
-    vm.sidebar = {
-        content: "Get the latest information about earthquakes around the globe."
-    };
+   
     vm.content = "INTRODUCTION";
 }
 

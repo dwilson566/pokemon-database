@@ -6,10 +6,12 @@ function resistanceCtrl($http) {
     var vm = this;
     var resistanceTableData;
     vm.Types = [];
- 
-   $http.get('/api/resistanceTable').then(function(response){ 
+    vm.Immunes = [];
+    
+     $http.get('/api/resistanceTable').then(function(response){ 
         
        resistanceTableData = response.data;
+       vm.tableData = resistanceTableData;
        
        for(var i = 0; i<resistanceTableData.length; i++){
                 vm.Types.push(resistanceTableData[i].name);
@@ -28,3 +30,4 @@ function resistanceCtrl($http) {
     };
     
 }
+
