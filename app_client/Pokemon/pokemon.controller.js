@@ -66,7 +66,8 @@ function pokemonCtrl($http) {
     
     
     
-   
+   //call services
+        vm.getPokemonData();
 
         
 }
