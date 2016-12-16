@@ -1,3 +1,12 @@
+
+Heroku
+https://pokedexproject.herokuapp.com/
+
+
+
+
+
+Log/////
 Got stuck with updates
 Got stuck with nodemon routes
 got stuck with angular/ all other files being brought in
