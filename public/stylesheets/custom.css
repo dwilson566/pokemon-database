@@ -1,6 +1,10 @@
 #sidebar-wrapper {
     color: #1c123a;
     background: #1c123a;
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG");
+    background-size: 100% 26.6%;
+   background-size: percentage;
+    
 }
 .sidebar-nav {
     color: #1c123a;
