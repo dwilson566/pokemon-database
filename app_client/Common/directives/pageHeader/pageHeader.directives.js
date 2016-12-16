@@ -1,7 +1,7 @@
 (function () {
 
   angular
-    .module('airplaneApp')
+    .module('pokemonapp')
     .directive('pageHeader', pageHeader);
 
   function pageHeader () {
@@ -10,7 +10,7 @@
       scope: {
         content : '=content'
       },
-      templateUrl: '/common/directives/pageHeader/pageHeader.template.html'
+      templateUrl: '/Common/directives/pageHeader/pageHeader.template.html'
     };
   }
 

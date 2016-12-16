@@ -1,45 +1,40 @@
 
 (function () {
 
-  angular.module('airplaneApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
+  angular.module('pokemonapp', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
 
   function config ($routeProvider, $locationProvider) {
     
     console.log("TEST");
     
     $routeProvider
+    
       .when('/', {
-        templateUrl: '/home/home.view.html',
+        templateUrl: '/Home/home.view.html',
         controller: 'homeCtrl',
         controllerAs: 'vm'
       })
-      /*
-      .when('/takeoff/', {
-        templateUrl: '/takeoff/takeoff.view.html',
-        controller: 'takeoffCtrl',
+      .when('/Pokemon/', {
+        templateUrl: '/Pokemon/pokemon.view.html',
+        controller: 'pokemonCtrl',
         controllerAs: 'vm'
       })
-      .when('/landing/', {
-        templateUrl: '/landing/landing.view.html',
-        controller: 'landingCtrl',
+      .when('/Abilities/', {
+        templateUrl: '/Abilities/abilities.view.html',
+        controller: 'ablitiesCtrl',
         controllerAs: 'vm'
       })
-      .when('/climb/', {
-        templateUrl: '/climb/climb.view.html',
-        controller: 'climbCtrl',
+      .when('/fourOfour/', {
+        templateUrl: '/404Page/fourOfour.view.html',
+        controller: 'fourOfourCtrl',
         controllerAs: 'vm'
       })
-      .when('/airport/', {
-        templateUrl: '/airport/airport.view.html',
-        controller: 'airportCtrl',
+      .when('/Resistances/', {
+        templateUrl: '/Resistances/resistances.view.html',
+        controller: 'resistanceCtrl',
         controllerAs: 'vm'
       })
-      .when('/weather/', {
-        templateUrl: '/weather/weather.view.html',
-        controller: 'weatherCtrl',
-        controllerAs: 'vm'
-      })      */
-      .otherwise({redirectTo: '/'});
+      .otherwise({redirectTo: '/fourOfour/'});
 
     // use the HTML5 History API
     $locationProvider.html5Mode(

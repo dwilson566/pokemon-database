@@ -1,17 +1,37 @@
+angular
+    .module('pokemonapp')
+    .controller('homeCtrl', homeCtrl);
+
+function homeCtrl($http) {
+    var vm = this;
+
+
+    $http.get('/api/PokemonData').then(function(response){ 
+       vm.output = response.data;
+
+    });
+    vm.pageHeader = {
+        title: 'Home',
+        strapline: 'Earthquake reporting app'
+    };
+    vm.sidebar = {
+        content: "Get the latest information about earthquakes around the globe."
+    };
+    vm.content = "INTRODUCTION";
+}
+
+
+/*
 (function() {
 
   angular
     .module('pokemonapp')
     .controller('homeCtrl', homeCtrl);
 
-  homeCtrl.$inject = ['$scope', `SelectedData`];
+  //homeCtrl.$inject = ['$scope', `SelectedData`];
 
   function homeCtrl($scope, SelectedData) {
-    // Nasty IE9 redirect hack (not recommended)
-    /*
-    if (window.location.pathname !== '/') {
-      window.location.href = '/#' + window.location.pathname;
-    }*/
+ 
     var vm = this;
     console.log(window.location);
     
@@ -39,3 +59,4 @@
   }
 
 })();
+*/

@@ -1,0 +1,114 @@
+var AbilitySchema = new mongoose.Schema({
+    move1: String,
+    Description1: String,
+    move2: String,
+    Description2: String,
+    move3: String,
+    Description3: String,
+    move4: String,
+    Description4: String,
+   
+});
+mongoose.model('AbilityData',AbilitySchema, 'AbilityData');
+
+
+Height in meters
+weight in kilograms
+var pokemonTable = new mongoose.Schema({
+	name: String,
+	type: String,
+	height: Number,
+	weight: Number
+});
+
+db.pokemonTable.insert(
+	[
+	{name: "Bulbasour",		type: "Grass",		height: 0.71,	weight:6.9},
+	{name: "Ivysaur",		type: "Grass",		height: 0.99,	weight:13.0},
+	{name: "Venusaur",		type: "Grass",		height: 2.39,	weight:155.5},
+	{name: "Charmander",	type: "Grass",		height: 0.61,	weight:100.0},
+	{name: "Charmeleon",	type: "Fire",		height:1.09,	weight:19.0},
+	{name: "Charizard",		type: "Fire",		height:1.70,	weight:90.5},
+	{name: "Squirtle",		type: "Water",		height:0.51,	weight:9.0},
+	{name: "Wartortle",		type: "Water",		height:0.99,	weight:22.5},
+	{name: "Blastoise",		type: "Water",		height:1.60,	weight:85.5},
+	{name: "Caterpie",		type: "Bug",		height:0.30,	weight:2.9},
+	{name: "Metapod",		type: "Bug",		height:.71,		weight:9.9},
+	{name: "Butterfree",	type: "Bug",		height:1.09,	weight:32.0},
+	{name: "Weedle",		type: "Bug",		height:0.30,	weight:3.2},
+	{name: "Kakuna",		type: "Bug",		height:0.61,	weight:10.0},
+	{name: "Beedrill",		type: "Bug",		height:0.99,	weight:29.5},
+	{name: "Pidgey",		type: "Flying",		height:0.30,	weight:1.8},
+	{name: "Pideotto",		type: "Flying",		height:1.09,	weight:30.0},
+	{name: "Pidgeot",		type: "Flying",		height:1.50,	weight:39.5},
+	{name: "Rattata",		type: "Normal",		height:.30,		weight:3.5},
+	{name: "Raticate",		type: "Normal",		height:.71,		weight:18.5},
+	{name: "Spearow",		type: "Flying",		height:0.30,	weight:2.0},
+	{name: "Fearow",		type: "Flying",		height:1.19,	weight:38.0},
+	{name: "Ekans",			type: "Poison",		height:2.01,	weight:6.9},
+	{name: "Arbok",			type: "Poison",		height:3.51,	weight:65.0},
+	{name: "Pikachu",		type: "Electric",	height:0.41,	weight:6.0},
+	{name: "Raichu",		type: "Electric",	height:0.79,	weight:30.0},
+	{name: "Sandshrew",		type: "Ground",		height:0.71,	weight:12.0},
+	{name: "Sandslash",		type: "Ground",		height:0.99,	weight:29.5},
+	{name: "Nidoran",		type: "Poison",		height:0.41,	weight:7.0},
+	{name: "Nidorina",		type: "Poison",		height:0.79,	weight:20.0},
+	{name: "Nidoqueen",		type: "Poison",		height:1.30,	weight:60.0},
+	{name: "Nidoran",		type: "Poison",		height:0.51,	weight:9.0},
+	{name: "Nidorino",		type: "Poison",		height:0.89,	weight:19.5},
+	{name: "Nidoking",		type: "Poison",		height:1.40,	weight:62.0},
+	{name: "Clefairy",		type: "Fairy",		height:0.61,	weight:7.5},
+	{name: "Clefable",		type: "Fairy",		height:1.30,	weight:40.0},
+	{name: "Vulpix",		type: "Fire",		height:0.61,	weight:9.9},
+	{name: "Ninetales",		type: "Fire",		height:1.09,	weight:19.9},
+	{name: "Jigglepuff",	type: "Fairy",		height:0.51,	weight:5.5},
+	{name: "Wigglytuff",	type: "Fairy",		height:0.99,	weight:12.0},
+	{name: "Zubat",			type: "Flying",		height:0.79,	weight:7.5},
+	{name: "Golbat",		type: "Flying",		height:1.60,	weight:55.0},
+	{name: "Oddish",		type: "Poison",		height:0.51,	weight:5.4},
+	{name: "Gloom",			type: "Poison",		height:0.79,	weight:8.6},
+	{name: "Vileplume",		type: "Poison",		height:1.19,	weight:18.6},
+	{name: "Paras",			type: "Bug",		height:0.30,	weight:5.4},
+	{name: "Parasect",		type: "Bug",		height:0.99,	weight:29.5},
+	{name: "Venonat",		type: "Bug",		height:0.99,	weight:30.0},
+	{name: "Venomoth",		type: "Bug",		height:1.50,	weight:12.5}
+	]
+)
+
+
+	{name: "Diglett",		type:,height:,weight:}
+	{name: "Dugtrio",		type:,height:,weight:}
+	{name: "Meowth",		type:,height:,weight:}
+	{name: "Persian",		type:,height:,weight:}
+	{name: "Psyduck",		type:,height:,weight:}
+	{name: "Golduck",		type:,height:,weight:}
+	{name: "Mankey",		type:,height:,weight:}
+	{name: "Primeape",		type:,height:,weight:}
+	{name: "Growlithe",		type:,height:,weight:}
+	{name: "Arcanine",		type:,height:,weight:}
+	{name: "Poliwag",		type:,height:,weight:}
+	{name: "Poliwhirl",		type:,height:,weight:}
+	{name: "Poliwrath",		type:,height:,weight:}
+	{name: "Abra",			type:,height:,weight:}
+	{name: "Kadabra",		type:,height:,weight:}
+	{name: "Alakazam",		type:,height:,weight:}
+	
+	
+db.resistanceTable.insert([{"name":"Normal","immunes":["Ghost"],"weaknesses":["Rock","Steel"],"strengths":[]},
+{"name":"Fire","immunes":[],"weaknesses":["Fire","Water","Rock","Dragon"],"strengths":["Grass","Ice","Bug","Steel"]},
+{"name":"Water","immunes":[],"weaknesses":["Water","Grass","Dragon"],"strengths":["Fire","Ground","Rock"]},
+{"name":"Electric","immunes":["Ground"],"weaknesses":["Electric","Grass","Dragon"],"strengths":["Water","Flying"]},
+{"name":"Grass","immunes":[],"weaknesses":["Fire","Grass","Poison","Flying","Bug","Dragon","Steel"],"strengths":["Water","Ground","Rock"]},
+{"name":"Ice","immunes":[],"weaknesses":["Fire","Water","Ice","Steel"],"strengths":["Grass","Ground","Flying","Dragon"]},
+{"name":"Fighting","immunes":["Ghost"],"weaknesses":["Poison","Flying","Psychic","Bug","Fairy"],"strengths":["Normal","Ice","Rock","Dark","Steel"]},
+{"name":"Poison","immunes":["Steel"],"weaknesses":["Poison","Ground","Rock","Ghost"],"strengths":["Grass","Fairy"]},
+{"name":"Ground","immunes":["Flying"],"weaknesses":["Grass","Bug"],"strengths":["Fire","Electric","Poison","Rock","Steel"]},
+{"name":"Flying","immunes":[],"weaknesses":["Electric","Rock","Steel"],"strengths":["Grass","Fighting","Bug"]},
+{"name":"Psychic","immunes":["Dark"],"weaknesses":["Psychic","Steel"],"strengths":["Fighting","Poison"]},
+{"name":"Bug","immunes":[],"weaknesses":["Fire","Fighting","Poison","Flying","Ghost","Steel","Fairy"],"strengths":["Grass","Psychic","Dark"]},
+{"name":"Rock","immunes":[],"weaknesses":["Fighting","Ground","Steel"],"strengths":["Fire","Ice","Flying","Bug"]},
+{"name":"Ghost","immunes":["Normal"],"weaknesses":["Dark"],"strengths":["Psychic","Ghost"]},
+{"name":"Dragon","immunes":["Fairy"],"weaknesses":["Steel"],"strengths":["Dragon"]},
+{"name":"Dark","immunes":[],"weaknesses":["Fighting","Dark","Fairy"],"strengths":["Psychic","Ghost"]},
+{"name":"Steel","immunes":[],"weaknesses":["Fire","Water","Electric","Steel"],"strengths":["Ice","Rock","Fairy"]},
+{"name":"Fairy","immunes":[],"weaknesses":["Fire","Poison","Steel"],"strengths":["Fighting","Dragon","Dark"]}])

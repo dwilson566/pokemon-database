@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI = 'mongodb://localhost/loc8r'; // what is this suppose to say
+//var dbURI = 'mongodb://localhost/loc8r'; // what is this suppose to say
+var dbURI = 'mongodb://pokemon:pokemon@ds127988.mlab.com:27988/finalprojectpokemonapi';
 if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGOLAB_URI;
 }
@@ -47,3 +48,4 @@ process.on('SIGTERM', function() {
 
 // BRING IN YOUR SCHEMAS & MODELS
 require('./pokemonData');
+require('./resistanceData');

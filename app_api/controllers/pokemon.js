@@ -12,7 +12,7 @@ var sendJSONresponse = function(res, status, content)
 }
 
 
-/* Get all Pokemon Data */
+/* Get all Pokemon Data 
 
 module.exports.pokemonDataReadAll = function(req,res)
 {
@@ -28,7 +28,22 @@ module.exports.pokemonDataReadAll = function(req,res)
             console.log(PokemonData);
             sendJSONresponse(res,200, PokemonData);
         });
-}
+} */
+
+var sendJSONres = function(res, content) {
+  res.json(content);
+};
+
+
+
+module.exports.pokemonDataReadAll = function(req, res) {
+  console.log('Finding data');
+    PokemonData
+      .find()
+      .exec(function(err, _x) {
+        sendJSONres(res, _x);
+      });
+};
 
 /* Get Pokemon Data by Name*/
 
@@ -62,3 +77,4 @@ module.exports.pokemonDataReadOne = function(req,res){
         });
     }
 };
+

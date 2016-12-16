@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="airplaneApp">
+<html ng-app="pokemonapp">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
@@ -13,17 +13,17 @@
     
   </head>
   <body ng-view>
-    
+      
     <!--      -->  
     <script src="/angular/angular.min.js"></script>
     <script src="/angular/angular-route.min.js"></script>
     <script src="/angular/angular-sanitize.min.js"></script>
     <script src="/angular/ui-bootstrap-2.2.0.min.js"></script>
     <script src="/angular/ui-bootstrap-tpls-2.2.0.min.js"></script>
-
+    <script src ="/javascripts/jquery-3.1.1.min.js"></script>
     <!-- including all client js files -->
     <script src="app.js"></script>
-    <script src="/common/services/airportData.service.js"></script>
+   <!-- <script src="/common/services/airportData.service.js"></script>
     <script src="/common/services/airplaneData.service.js"></script>
     <script src="/common/services/darkskyWeather.service.js"></script>
     <script src="/common/services/selectedData.factory.js"></script>
@@ -31,13 +31,21 @@
     <script src="/common/directives/sideBar/sideBar.directive.js"></script>
     <script src="/common/directives/footerGeneric/footerGeneric.directive.js"></script>
     <script src="/common/directives/weatherInfo/weatherInfo.directive.js"></script>
-    <script src="/common/directives/dateNow/dateNow.directive.js"></script>    
-    <script src="/home/home.controller.js"></script>
-    <script src="/airport/airport.controller.js"></script>
-    <script src="/climb/climb.controller.js"></script>
-    <script src="/landing/landing.controller.js"></script>
-    <script src="/takeoff/takeoff.controller.js"></script>
-    <script src="/weather/weather.controller.js"></script>    
+    <script src="/common/directives/dateNow/dateNow.directive.js"></script>    -->
+    
+    <script src ="/Common/directives/sideBar/sideBar.directive.js"></script>
+    <script src ="/Common/directives/abilites/abilites.directive.js"></script>
+    <script src = "./Common/services/pokeapi.service.js"></script>
+    <script src = "./Common/services/pokemonData.service.js"></script>
+    <script src = "./Common/selectedData.factory.js"></script>  
+    <script src = "./Common/keyStore.factory.js"></script>
+    <script src = "./Common/Names/pokemonNames.directive.js"></script>
+    <script src = "./Home/home.controller.js"></script>
+    <script src = "./Pokemon/pokemon.controller.js"></script>
+    <script src = "./Abilities/abilities.controller.js"></script>
+    <script src = "./404Page/fourOfour.controller.js"></script>
+    <script src = "./Resistances/resitances.controller.js"></script>
+    
 
 
     <script src="/javascripts/jquery-3.1.1.min.js"></script>

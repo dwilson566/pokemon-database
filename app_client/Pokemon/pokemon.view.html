@@ -1,36 +1,148 @@
+
+
+<div id="wrapper" ng-class="vm.toggle ? 'toggled' : ''">
+
+    <sideBar></sideBar>
+    <navBar></navBar>
+   
+
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            
+   <!--
+             <h4> Select A Pokemon</h4>           
+            <select class = "form-control ng-valid ng-not-empty ng-touched ng-dirty ng-valid-parse" 
+            ng-model="vm.pokemonNames" 
+            ng-options="x for x in vm.pokemonNames"></select> -->
+       
+           
+        </div>
+        <fieldset>
+            <legend>   Pokemon Selection:</legend>
+        <div class="form-group">
+                                <label for="selectName">Select Pokemon Name</label>
+                                <select id="selectName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectName" 
+                                        ng-options="x for x in vm.pokemonNames"
+                                        value ={{vm.name}}></select>
+                                <p class="bg-info" ng-bind="vm.name"></p>
+        </div>
+        
+       <button class = "btn btn-defualt" id="submitbtn" onclick = "" type = button>
+           Submit Choice
+        </fieldset>
+           
+           </button>
+           <p>
+               
+               
+           </p>
+       <fieldset>    
+           <legend>  Pokemon Stats:</legend>
+       <div class = "form-group">
+           
+               
+              
+            <form class="panel panel-default">
+              <div class="panel-heading">Type:</div>
+              
+             <div class="panel-body">{{vm.pokemonType}}</div>
+              
+              <!-- <div>
+               for ( i = 0; i<pokemonTableData.length; i++){
+                    testname = pokemonTableData[i].name;
+                    if(vm.name ==testname ){
+                         <div class="panel-body">{{vm.pokemonType[i]}}</div> 
+                    }
+                }
+                </div>-->
+            </form>
+            
+            
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">Height in Meters:</div>
+              <div class="panel-body">{{vm.pokemonHeight}}</div> 
+            </div>
+            
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">Weight in Kilograms:</div>
+              <div class="panel-body">{{vm.pokemonWeight}}</div>  
+            </div>
+        
+        </div>
+        </fieldset>
+        
+        
+    </div>
+    
+</div>
 <style>
+
 body  {
-    background-image: url("http://feelgrafix.com/data/pictures/pictures-1.jpg");
+    /*background-image: url("http://cartoonbros.com/wp-content/uploads/2016/04/Pokemon-19.jpg");
+      background-image: url("http://cartoonbros.com/wp-content/uploads/2016/04/Pokemon-6.jpg");
+      background-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/02/Pokemon-Pikachu-Backgrounds-Wallpapers.jpg");
+      background-image: url("http://www.pokechronique.com/medias/images/1920x1080-pokemon-wallpaper-1280x800-46081.jpg");
+       background-image: url("http://hutui6.com/data/out/152/67453776-pokemon-wallpapers.jpg");*/
+     background-image: url("http://www.walldevil.com/wallpapers/a82/pokemon-wallpaper-anime.jpg");
     background-color: #cccccc;
+    
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    } 
+panel{
+    display:inline;
+}
+
+fieldset { 
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove ;
 }
 </style>
+<!--
+<div id="wrapper" >
 
-<div id="wrapper" ng-class="vm.toggle"? 'toggled':''">
+    <sideBar></sideBar>
+    
 
-    <sidebar></sidebar>
-    
-    <!--Page content-->
-    
-    <!-- Page Content -->
-    
+
+
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>{{vm.content}}</h1> 
+                    
+                        <div class ng-repeat = {{vm.pokemonNames}}></div>
+                    
+                    
                         <form novalidate>
                             <div class="form-group">
+                              
+                                
+                              
                                 <label for="selectName">Pokemon Name</label>
                                 <select id="selectName" 
                                         class="form-control" 
                                         ng-model="vm.selectName" 
-                                        <!-- his is where the pokemon names will be imported from the service -->
-                                        ng-options="apt.airportName for apt in vm.airports"></select> 
-                                <p class="bg-info" ng-bind="vm.selectedName.pokemonData"></p>
+                                       
+                                        ng-options="pkm.pokemonName for pkm in vm.pokemonData"></select> 
+                                <p class="bg-info" ng-bind="vm.pokemonData"></p>
                             </div>
                             
                             
-                            <div class="form-group" background = backgroud = "http://feelgrafix.com/data/pictures/pictures-1.jpg">
+                            <div class="form-group">
                                 <label for="selectType">Type</label>
                                 <select id="selectType" 
                                         class="form-control" 
@@ -61,14 +173,14 @@ body  {
                             </div>        
                         </form>
                     
-                    <!--<a href="#menu-toggle" class="btn btn-default" id="menu-toggle" ng-click="toggleMenu">Toggle Menu</a>-->
+                    <!--<a href="#menu-toggle" class="btn btn-default" id="menu-toggle" ng-click="toggleMenu">Toggle Menu</a>
                     <button type="button" class="btn btn-default btn-link" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle">Toggle Menu</button>
                     <button type="button" class="btn btn-default" id="clear-selected-data" ng-click="vm.clearSelectedData()">Clear Selected</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /#page-content-wrapper -->
+  
 
 </div>
-<!-- /#wrapper -->
+ /#wrapper -->

@@ -2,14 +2,15 @@ var mongoose = require('mongoose');
 
 //insert schemas here
 
-var PokemonSchema = new mongoose.Schema({
+var pokemonTable = new mongoose.Schema({
     name: String,
     type: String,
-    weight: Number,
-    height: Number
-    
+    height: Number,
+    weight: Number
+   
 });
 
-mongoose.model('PokemonData', PokemonSchema,'PokemonData');
+mongoose.model('PokemonData', pokemonTable,'pokemonTable');
 
-//var AbilitiesSchema
+
+//restancesSchema

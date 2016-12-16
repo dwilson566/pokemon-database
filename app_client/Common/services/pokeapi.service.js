@@ -15,12 +15,7 @@
                     console.log(keys);
                     //no key is needed 
                     //var pokekey = keys.Poke_key;
-                    return $http.jsonp('http://pokeapi.co/api/v2' 
-                    + '/' + name 
-                    + ',' + weight 
-                    + ',' + type
-                    + ',' + weight
-                    + "?callback=JSON_CALLBACK", {
+                    return $http.jsonp('http://pokeapi.co/api/v2' + "?callback=JSON_CALLBACK", {
                         jsonpCallbackParam: 'callback'
                     });
                 })
@@ -31,10 +26,6 @@
         
         var getData2 = function(name,weight,type,height){
             return $http.jsonp('http://pokeapi.co/api/v2' 
-                    + '/' + name 
-                    + ',' + weight 
-                    + ',' + type
-                    + ',' + weight
                     + "?callback=JSON_CALLBACK", {
                         jsonpCallbackParam: 'callback'
                     });
@@ -48,3 +39,11 @@
     }
     
 })();
+
+/*
+ return $http.jsonp('http://pokeapi.co/api/v2' 
+                    + '/' + name 
+                    + ',' + weight 
+                    + ',' + type
+                    + ',' + weight
+                    + "?callback=JSON_CALLBACK" */
